@@ -4,10 +4,10 @@ p1wins = 0;
 p2wins = 0;
 game = false;
 function run(){
-  guesses = document.getElementById("guess").value
   draw(0,0,p1wins,p2wins)
   console.log(game)
   if (!game){
+    guesses = document.getElementById("guess").value
     turn = 0;
     p1scr = 0;
     p2scr = 0;
