@@ -2,14 +2,18 @@ const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 p1wins = 0;
 p2wins = 0;
+game = false;
 function run(){
   guesses = document.getElementById("guess").value
-  game = true;
-  turn = 0;
-  p1scr = 0;
-  p2scr = 0;
-  draw(p1scr,p2scr,p1wins,p2wins)
-  window.requestAnimationFrame(go);
+  draw(0,0,p1wins,p2wins)
+  console.log(game)
+  if (!game){
+    turn = 0;
+    p1scr = 0;
+    p2scr = 0;
+    game = true;
+    window.requestAnimationFrame(go);
+  }
 }
 function draw(p1scr,p2scr,p1wins,p2wins){
   context.fillStyle = "#fadf7f";
