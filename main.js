@@ -5,7 +5,6 @@ p2wins = 0;
 game = false;
 function run(){
   draw(0,0,p1wins,p2wins)
-  console.log(game)
   if (!game){
     guesses = document.getElementById("guess").value
     turn = 0;
@@ -45,8 +44,7 @@ function coin(x,y,face){
   context.fillText(face,x,y)
 }
 function flip(){
-  if (Math.floor(Math.random()*2) == 0){return "T"}
-  else {return "H"}
+  Math.floor(Math.random()*2) == 0 ? return "T": return "H"
 }
 
 function go(){
