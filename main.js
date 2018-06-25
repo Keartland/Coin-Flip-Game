@@ -44,9 +44,9 @@ function coin(x,y,face){
   context.fillText(face,x,y)
 }
 function flip(){
-  Math.floor(Math.random()*2) == 0 ? return "T": return "H"
+  if (Math.floor(Math.random()*2) == 0 ? return "T"}
+  else {return "H"}
 }
-
 function go(){
   draw(p1scr,p2scr,p1wins,p2wins)
   if (turn == 0){
